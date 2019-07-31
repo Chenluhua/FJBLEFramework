@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FJBLEFramework"
-  s.version      = "1.0.1"
+  s.version      = “1.0.2”
   s.summary      = "BLE蓝牙设备支持库 - FJBLEFramework"
 
   # This description is used to generate tags and improve search results.
@@ -25,10 +25,10 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-BLE蓝牙设备支持库，目前包含心率设备
+FJBLEFramework 是一个BLE蓝牙设备支持库，目前支持心率手环，心率带等标准心率设备。
                    DESC
 
-  s.homepage     = "https://github.com/Chenluhua/ApredCloud/FJBLEFramework"
+  s.homepage     = "https://github.com/Chenluhua/FJBLEFramework"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -53,7 +53,7 @@ BLE蓝牙设备支持库，目前包含心率设备
   #  profile URL.
   #
 
-  s.author             = { "Luhua.Chen" => "chenluhua@qq.com" }
+  s.author             = { "Luhua Chen" => "chenluhua@qq.com" }
   # Or just: s.author    = "Luhua.Chen"
   # s.authors            = { "Luhua.Chen" => "luhua.chen@mioglobal.cn" }
   # s.social_media_url   = "http://twitter.com/Luhua.Chen"
@@ -67,7 +67,6 @@ BLE蓝牙设备支持库，目前包含心率设备
   # s.platform     = :ios
   # s.platform     = :ios, "5.0"
 
-  s.platform     = :ios, “9.0”
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
   # s.osx.deployment_target = "10.7"
@@ -81,7 +80,7 @@ BLE蓝牙设备支持库，目前包含心率设备
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/Chenluhua/ApredCloud.git/FJBLEFramework.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/Chenluhua/FJBLEFramework.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -93,8 +92,18 @@ BLE蓝牙设备支持库，目前包含心率设备
   #
 
   s.source_files  = "FJBLEFramework/FJBLEFramework.framework/Headers/*.{h}"
+
+  # 你的SDK路径（因为传的是静态库，这个必须要）
+  s.vendored_frameworks = "FJBLEFramework/FJBLEFramework.framework"
   s.exclude_files = "Classes/Exclude"
 
+
+   # 依赖库
+   s.frameworks = "Foundation", "UIKit"
+   # 支持最小系统版本
+   s.platform     = :ios, "9.0"
+   # 依赖的第三方，有几个写几个
+   s.dependency "MQTTClient"
   # s.public_header_files = "Classes/**/*.h"
 
 
@@ -118,6 +127,8 @@ BLE蓝牙设备支持库，目前包含心率设备
   #  the lib prefix of their name.
   #
 
+
+  s.frameworks = "Foundation", "UIKit"
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
