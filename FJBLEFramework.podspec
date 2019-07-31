@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FJBLEFramework"
-  s.version      = "1.0.3"
+  s.version      = “1.0.4"
   s.summary      = "BLE蓝牙设备支持库 - FJBLEFramework"
 
   # This description is used to generate tags and improve search results.
@@ -103,7 +103,6 @@ FJBLEFramework 是一个BLE蓝牙设备支持库，目前支持心率手环，�
    # 支持最小系统版本
    s.platform     = :ios, "9.0"
    # 依赖的第三方，有几个写几个
-   s.dependency "MQTTClient"
   # s.public_header_files = "Classes/**/*.h"
 
 
