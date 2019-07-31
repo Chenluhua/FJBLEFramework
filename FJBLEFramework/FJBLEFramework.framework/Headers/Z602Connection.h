@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Request.h"
+#import "BLERequest.h"
 
 typedef struct _Z602Alarm {
     Byte number;
@@ -119,25 +119,25 @@ typedef void(^STREAMINGDATAARRIVED)(Z602Connection *connection, Z602StreamingDat
 @interface Z602Connection : NSObject
 @property (nonatomic, readonly) BOOL isPaired;
 
--(int)askPair:(RESULTBLOCK)resultBlock;
--(int)factoryGetSN:(RESULTBLOCK)resultBlock;
--(int)factorySetSN:(unsigned int)sn resultBlock:(RESULTBLOCK)resultBlock;
--(int)normalModeSetSN:(unsigned int)sn resultBlock:(RESULTBLOCK)resultBlock;
--(int)testReset:(RESULTBLOCK)resultBlock;
--(int)testMotorLed:(BOOL)on resultBlock:(RESULTBLOCK)resultBlock;
--(int)setBleName:(BOOL)bAttachSn name:(NSString *)name resultBlock:(RESULTBLOCK)resultBlock;
--(int)getAlarm:(unsigned int)number resultBlock:(RESULTBLOCK)resultBlock;
--(int)setAlarm:(Z602Alarm *)alerm resultBlock:(RESULTBLOCK)resultBlock;
--(int)getCalender:(RESULTBLOCK)resultBlock;
--(int)setCalender:(Z602Datetime *)datetime resultBlock:(RESULTBLOCK)resultBlock;
--(int)setGeneralSettings:(Z602GeneralSettings *)settings resultBlock:(RESULTBLOCK)resultBlock;
--(int)getGeneralSettings:(RESULTBLOCK)resultBlock;
--(int)getUserProfile:(RESULTBLOCK)resultBlock;
--(int)setUserProfile:(Z602UserProfile *)profile resultBlock:(RESULTBLOCK)resultBlock;
--(int)getSedentaryTime:(RESULTBLOCK)resultBlock;
--(int)setSedentaryTime:(Z602SedentaryTime *)sedentary resultBlock:(RESULTBLOCK)resultBlock;
--(int)getSilentSetting:(RESULTBLOCK)resultBlock;
--(int)setSilentSetting:(Z602SilentSetting *)setting resultBlock:(RESULTBLOCK)resultBlock;
+-(int)askPair:(BLERESULTBLOCK)resultBlock;
+-(int)factoryGetSN:(BLERESULTBLOCK)resultBlock;
+-(int)factorySetSN:(unsigned int)sn resultBlock:(BLERESULTBLOCK)resultBlock;
+-(int)normalModeSetSN:(unsigned int)sn resultBlock:(BLERESULTBLOCK)resultBlock;
+-(int)testReset:(BLERESULTBLOCK)resultBlock;
+-(int)testMotorLed:(BOOL)on resultBlock:(BLERESULTBLOCK)resultBlock;
+-(int)setBleName:(BOOL)bAttachSn name:(NSString *)name resultBlock:(BLERESULTBLOCK)resultBlock;
+-(int)getAlarm:(unsigned int)number resultBlock:(BLERESULTBLOCK)resultBlock;
+-(int)setAlarm:(Z602Alarm *)alerm resultBlock:(BLERESULTBLOCK)resultBlock;
+-(int)getCalender:(BLERESULTBLOCK)resultBlock;
+-(int)setCalender:(Z602Datetime *)datetime resultBlock:(BLERESULTBLOCK)resultBlock;
+-(int)setGeneralSettings:(Z602GeneralSettings *)settings resultBlock:(BLERESULTBLOCK)resultBlock;
+-(int)getGeneralSettings:(BLERESULTBLOCK)resultBlock;
+-(int)getUserProfile:(BLERESULTBLOCK)resultBlock;
+-(int)setUserProfile:(Z602UserProfile *)profile resultBlock:(BLERESULTBLOCK)resultBlock;
+-(int)getSedentaryTime:(BLERESULTBLOCK)resultBlock;
+-(int)setSedentaryTime:(Z602SedentaryTime *)sedentary resultBlock:(BLERESULTBLOCK)resultBlock;
+-(int)getSilentSetting:(BLERESULTBLOCK)resultBlock;
+-(int)setSilentSetting:(Z602SilentSetting *)setting resultBlock:(BLERESULTBLOCK)resultBlock;
 -(int)getDailyRecord:(int)nDayIndex beginBlock:(BEGINBLOCK)beginBlock progressBlock:(PROGRESSBLOCK)progressBlock errorBlock:(ERRORBLOCK)errorBlock completeBlock:(COMPLETEBLOCK)completeBlock;
 -(int)getExerciseData:(BOOL)isDelAfterCompletion beginBlock:(BEGINBLOCK)beginBlock progressBlock:(PROGRESSBLOCK)progressBlock errorBlock:(ERRORBLOCK)errorBlock completeBlock:(COMPLETEBLOCK)completeBlock;;
 -(int)enableStream:(STREAMINGDATAARRIVED)block;
