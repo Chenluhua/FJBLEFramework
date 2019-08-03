@@ -69,17 +69,17 @@ typedef enum
 @property (nonatomic,strong, nullable) id<FBScannerDelegate> delegate;
 
 
-+ (nullable FBScanner*)SharedFBScanner;
++ (nullable FBScanner*)sharedFBScanner;
 + (nullable NSString *)getCBCManagerStateString:(int)state;
 + (nullable NSString *)getStateString:(SCANNERState)state;
 -(SCANNERState)getState;
 - (nullable id)initWithDelegate:(nullable id<FBScannerDelegate>)delegatet;
--(void)StopScan;
-- (int)Scan:(nullable id<FBScannerDelegate>)delegatet uuids:(nullable NSArray *)serviceUUIDs options:(nullable NSDictionary *)options;
+-(void)stopScan;
+- (int)scan:(nullable id<FBScannerDelegate>)delegatet uuids:(nullable NSArray *)serviceUUIDs options:(nullable NSDictionary *)options duration:(unsigned int)duration;
 - (nullable FBDeviceConnection*)connect:(nullable BLEDevice *)device delegate:(nullable id<FBDeviceConnectionDelegate>)delegatet userData:(int)data;
-- (nullable FBDeviceConnection *)connectToPeripheral:(CBPeripheral *)peripheral delegate:(nullable id<FBDeviceConnectionDelegate>)delegatet userData:(int)data;
--(BOOL)ReConnect:(nullable FBDeviceConnection *)connection;
--(void)DisconnectD:(nullable BLEDevice *)device;
--(void)DisconnectC:(nullable FBDeviceConnection *)connection;
+- (nullable FBDeviceConnection *)connectToPeripheral:(CBPeripheral *_Nonnull)peripheral delegate:(nullable id<FBDeviceConnectionDelegate>)delegatet userData:(int)data;
+-(int)reConnect:(nullable FBDeviceConnection *)connection;
+-(void)disconnectWithDevice:(BLEDevice *_Nonnull)device;
+-(void)disconnectWithConnection:(FBDeviceConnection *_Nonnull)connection;
 
 @end
