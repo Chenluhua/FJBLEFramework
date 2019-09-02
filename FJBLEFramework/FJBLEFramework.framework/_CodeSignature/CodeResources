@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/FBDeviceConnection.h</key>
 		<data>
-		VmCLs1O7ukHYUl2hnnkolqJ+KzI=
+		Qb0mGyTCFBmRl3P7ErKtTKYHSck=
 		</data>
 		<key>Headers/FBScanner.h</key>
 		<data>
@@ -46,11 +46,19 @@
 		</data>
 		<key>Headers/FJBLEFramework.h</key>
 		<data>
-		co65mMTodk+4QlWzp6mYazVg8fE=
+		2RG0lwEuEeVynLcnkNlBy5F4lDM=
 		</data>
 		<key>Headers/HRMeterConnection.h</key>
 		<data>
 		3votIyErDVnRiOir5ZfIn00IjLU=
+		</data>
+		<key>Headers/Pixart2860Connection.h</key>
+		<data>
+		Zuf71SuPFb/0OeG1KuveP2womws=
+		</data>
+		<key>Headers/WGXConnection.h</key>
+		<data>
+		E9by4+8rTVn56NSj299e566ckzA=
 		</data>
 		<key>Headers/Z602Connection.h</key>
 		<data>
@@ -58,7 +66,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OojBMamTYDxUNEtmCNlXntcTvKI=
+		pfoOYBi+dAq3OivMBRSFBEbeq/Q=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -144,11 +152,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VmCLs1O7ukHYUl2hnnkolqJ+KzI=
+			Qb0mGyTCFBmRl3P7ErKtTKYHSck=
 			</data>
 			<key>hash2</key>
 			<data>
-			9WOgIEb66F5MvJd3TVf1g2VJxg0mmqzpL9FgQK8lRl0=
+			bSjFPXDw4TT6LdyVY8Zl0q49inM6GmDUiXQ3QBtAEZI=
 			</data>
 		</dict>
 		<key>Headers/FBScanner.h</key>
@@ -177,11 +185,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			co65mMTodk+4QlWzp6mYazVg8fE=
+			2RG0lwEuEeVynLcnkNlBy5F4lDM=
 			</data>
 			<key>hash2</key>
 			<data>
-			KkZB5RrAs/mW9PQa4O4swryDaoUK8HVTF5qL24ZQgOk=
+			ERyn7RoUlu8OL8DL1M2U50WOq6hKUJP8VxEeOUl2pUo=
 			</data>
 		</dict>
 		<key>Headers/HRMeterConnection.h</key>
@@ -193,6 +201,28 @@
 			<key>hash2</key>
 			<data>
 			4F/ppAVytbWfJj4cE6wbtFYTyE17xl8ZuiqkgM91Qts=
+			</data>
+		</dict>
+		<key>Headers/Pixart2860Connection.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Zuf71SuPFb/0OeG1KuveP2womws=
+			</data>
+			<key>hash2</key>
+			<data>
+			LUeOxbxdo959DmEG62lU5PN+E4wqdJ4Leh0NIOhf/Gc=
+			</data>
+		</dict>
+		<key>Headers/WGXConnection.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			E9by4+8rTVn56NSj299e566ckzA=
+			</data>
+			<key>hash2</key>
+			<data>
+			ee66i0m4b/PYY3TebM+ChczNgMjSf3+MasLH+WVdUso=
 			</data>
 		</dict>
 		<key>Headers/Z602Connection.h</key>

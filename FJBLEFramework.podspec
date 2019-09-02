@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FJBLEFramework"
-  s.version      = "1.0.9"
+  s.version      = "1.1.1"
   s.summary      = "BLE蓝牙设备支持库 - FJBLEFramework"
 
   # This description is used to generate tags and improve search results.

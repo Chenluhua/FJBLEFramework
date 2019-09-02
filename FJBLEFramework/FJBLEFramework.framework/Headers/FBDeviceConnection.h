@@ -16,7 +16,8 @@
 #import "HRMeterConnection.h"
 #import "EncrypterConnection.h"
 #import "Z602Connection.h"
-
+#import "WGXConnection.h"
+#import "Pixart2860Connection.h"
 
 /*
  * FBDeviceConnection State
@@ -45,6 +46,8 @@ typedef enum
     FBDMode_HRMeter,
     FBDMode_HREncrypter,
     FBDMode_Z602,
+    FBDMode_WGX_SMART_WATCH,
+    FBDMode_PIXART_2860,
 } FBDeviceMode;
 
 @class FBDeviceConnection;
@@ -99,5 +102,7 @@ typedef enum
 -(HRMeterConnection * _Nullable)getHRMeterConnection;
 -(EncrypterConnection * _Nullable)getEncrypterConnection;
 -(Z602Connection * _Nullable)getZ602Connection;
+-(WGXConnection * _Nullable)getWGXConnection;
+-(Pixart2860Connection * _Nullable)getPixart2860Connection;
 
 @end

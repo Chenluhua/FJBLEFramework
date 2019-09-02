@@ -16,6 +16,9 @@
 #import "HRMeterConnection.h"
 #import "EncrypterConnection.h"
 #import "Z602Connection.h"
+#import "WGXConnection.h"
+#import "Pixart2860Connection.h"
+
 
 //! Project version number for FJBLEFramework.
 FOUNDATION_EXPORT double FJBLEFrameworkVersionNumber;
