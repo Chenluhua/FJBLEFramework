@@ -64,7 +64,7 @@ typedef struct _Pixart2860StateConfiguration {
 
 // callback for centralManager state changed.
 - (void)connection:(nullable Pixart2860Connection *)connection didGetHRData:(unsigned short)hr rawData:(NSData * _Nonnull)data;
-- (void)connection:(nullable Pixart2860Connection *)connection didMeasurementResult:(int)type mode:(int)mode hr:(unsigned short)hr spo2:(int)spo2 dbp:(int)dbp sbp:(int)sbp;
+- (void)connection:(nullable Pixart2860Connection *)connection didMeasurementResult:(int)type mode:(int)mode state:(int)state hr:(unsigned short)hr spo2:(int)spo2 dbp:(int)dbp sbp:(int)sbp;
 
 @end
 
@@ -81,6 +81,7 @@ typedef struct _Pixart2860StateConfiguration {
 -(int)setGoal:(int)type goal:(int)value resultBlock:(BLERESULTBLOCK _Nullable)resultBlock;
 -(int)getStateConfiguration:(BLERESULTBLOCK _Nullable)resultBlock;
 -(int)setStateConfiguration:(Pixart2860StateConfiguration *_Nonnull)stateConfiguration resultBlock:(BLERESULTBLOCK _Nullable)resultBlock;
+-(int)getDailyActivity:(BLERESULTBLOCK _Nullable)resultBlock;
 -(int)measurementTrigger:(int)type mode:(int)mode resultBlock:(BLERESULTBLOCK _Nullable)resultBlock;
 
 @end
